@@ -8,20 +8,20 @@
 </head>
 <body>
     <header class="header">
-        <a href="" class="menu-container">
-            <img src="img/logo/left-arrow-alt-regular-72.png" class="arrow-menu">
+        <a href="" class="menu-container" id="show-button">
+            <img src="img/logo/left-arrow-alt-regular-72.png" class="arrow-menu" id="arrow-menu">
             <h2 class="header-menu">Portfolio</h2>
         </a>
     </header>
     <div class="main-container">
-        <div class="shadow-filter"></div>
+        <div class="shadow-filter disabled" id="show-filter"></div>
         <div class="main-card">
             <img src="img/matt-logo.jpg" alt="Image Matt Logo" class="main-img">
             <h1 class="main-name">Matt RODRIGUEZ</h1>
             <h3 class="main-current-job">Student in Computer Science</h3>
         </div>
-        <div class="bottom-menu" id="show-menu">
-            <div class="menu-home shrink-border">
+        <div class="bottom-menu disabled" id="show-menu">
+            <div class="menu-home">
                 <a href="">
                     <img src="./img/logo/home-regular-84.png" alt="home logo">
                     <h4 class="menu-title">Home</h4>
@@ -47,6 +47,13 @@
             </div>
         </div>
     </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+    <script src="js/script-home.js"></script>
 
 </body>
 </html>
