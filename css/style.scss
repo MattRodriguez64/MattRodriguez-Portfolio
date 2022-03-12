@@ -6,6 +6,7 @@ $main-yellow: #F1C40F;
 $white-cream: #F3F8F2;
 $charcoal: #424C55;
 $main-dark: #333232;
+$dark-black: #17202a;
 $main-blue: #3581B8;
 $lavender-blue: #DAE0F2;
 
@@ -39,7 +40,7 @@ body {
   background-color: $main-dark;
   @include size(100wh, 75px);
   padding: 0px 35px;
-  border-bottom: $charcoal solid 1px;
+  border-bottom: $dark-black solid 1px;
   .menu-container {
     display: flex;
     text-decoration: none;
@@ -116,6 +117,24 @@ body {
           color: #333232;
         }
 
+      }
+    }
+    .social-network-footer {
+      @include size(100%, auto);
+      @include flex-base-code(wrap, space-around, center);
+      flex-direction: row;
+      position: absolute;
+      color: $white-cream;
+      bottom: 0px;
+      padding: 24px 0px 24px 0px;
+      background-color: $dark-black;
+      & a img {
+        @include size(36px, 36px);
+        transform: scale(1);
+        transition: transform 300ms;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
     display: none;
