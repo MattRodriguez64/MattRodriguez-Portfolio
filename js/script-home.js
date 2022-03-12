@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $('#show-button').click(function() {
+
         if($('#show-menu').is(':visible')){
             $('#arrow-menu').animate(
                 {deg: 0},
@@ -11,7 +12,9 @@ $(document).ready(function() {
                     }
                 }
             );
-        }else {
+            $('#show-menu').fadeOut(500);
+            $('#show-filter').fadeOut(500);
+        }else if($('#show-menu').is(':hidden')){
             $('#arrow-menu').animate(
                 {deg: -90},
                 {
@@ -21,6 +24,8 @@ $(document).ready(function() {
                     }
                 }
             );
+            $('#show-menu').fadeIn(500);
+            $('#show-filter').fadeIn(500);
         }
         $('#show-menu').toggleClass('disabled');
         $('#show-filter').toggleClass('disabled');
