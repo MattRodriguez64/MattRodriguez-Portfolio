@@ -61,7 +61,24 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
+  #particles-js {
+    @include size(100%, 100%);
+    z-index: 3;
+  }
+
+  .shadow-particles-filter {
+    @include size(100%, 93vh);
+    position: absolute;
+    z-index: 3;
+    background: $dark-black !important;
+    opacity: 0.24;
+  }
+
   .main-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
     .main-img {
@@ -78,6 +95,7 @@ body {
       color: $white-cream;
       margin-top: 10px;
     }
+
   }
 
   .shadow-filter {
