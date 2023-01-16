@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css">
+    <title>RODRIGUEZ Matt - Portfolio</title>
+</head>
+<body>
+    <div class="main-container">
+        <section class="left-container">
+            <p class="title"></p>
+            <nav class="menu">
+                <ul>
+                {% for elt in ["Home", "About", "Services", "Portfolio", "Blog", "Contact"]: %}
+                    <li class="menu-item">{{ elt }}</li>
+                    <hr class="menu-item-subline">
+                {% endfor %}
+                </ul>
+            </nav>
+            <p class="copyright">© Matt RODRIGUEZ</p>
+        </section>
+        <section class="right-container">
+            {% block content %}{% endblock %}
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700&display=swap');
+
+// Colors
+$main-yellow: #F1C40F;
+$main-dark: #151515;
+$dark-light: #222222;
+$gray: #373737;
+$white: #fefffa;
+$light-gray: #cecece;
+
+// Sizes
+
+// Mixins
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-base-code($wrap, $jcontent, $acontent, $aitems){
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $jcontent;
+  align-content: $acontent;
+  align-items: $aitems;
+}
+
+
+
+body {
+  font-family: "M PLUS 1", sans-serif;
+  overflow: hidden;
+  background-color: $main-dark;
+}
+
+
+// MAIN CONTAINER
+.main-container {
+  .left-container {
+    @include size(300px, 100vh);
+    @include flex-base-code(wrap, center, space-between, none);
+    background-color: $dark-light;
+    float: left;
+    border-right: $gray solid 2px;
+
+    .title {
+      margin-top: 30px;
+    }
+
+    .menu {
+      @include size(100%, auto);
+      padding: 0px 30px;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+
+      .menu-item {
+        margin-top: 20px;
+      }
+
+      .menu-item-subline {
+        border: none;
+        height: 1px;
+        background-color: $gray;
+        margin-top: 20px;
+      }
+    }
+
+    .copyright {
+      color: $gray;
+      margin-bottom: 30px;
+    }
+  }
+  .right-container {
+    @include size(auto, 100vh);
+    @include flex-base-code(wrap, center, center, none);
+    .card {
+      text-align: center;
+      .card-img {
+        @include size(180px, 180px);
+        border-radius: 100%;
+        border: $white 6px solid;
+      }
+
+      .card-title {
+        color: $white;
+        font-weight: 700;
+        font-size: 38px;
+        margin-top: 32px;
+      }
+
+      .card-description {
+        color: $light-gray;
+        font-size: 26px;
+        margin-top: 24px;
+      }
+
+      .card-socials-networks {
+        @include size(184px, auto);
+        @include flex-base-code(wrap, space-between, center, none);
+        margin: 28px auto 0px auto;
+        .card-social-network-item {
+          @include size(28px, 28px);
+          padding: 4px;
+          background-color: $main-yellow;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
+
