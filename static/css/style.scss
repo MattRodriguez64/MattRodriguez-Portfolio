@@ -10,6 +10,7 @@ $white: #fefffa;
 $light-gray: #cecece;
 
 // Sizes
+$phone-view: 550px;
 
 // Mixins
 
@@ -37,6 +38,19 @@ body {
 
 // MAIN CONTAINER
 .main-container {
+  .top-container {
+    display: none;
+    @include size(100%, 64px);
+    background-color: $dark-light;
+    border-bottom: $gray solid 2px;
+
+    .menu-logo {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+  }
+
   .left-container {
     @include size(300px, 100vh);
     @include flex-base-code(wrap, center, space-between, none);
@@ -57,6 +71,10 @@ body {
 
       .menu-item {
         margin-top: 20px;
+        &:hover {
+          color: $main-yellow;
+          cursor: pointer;
+        }
       }
 
       .menu-item-subline {
@@ -111,3 +129,15 @@ body {
   }
 }
 
+
+// RESPONSIVE
+
+@media only screen and (max-width: $phone-view) {
+  #left-container {
+    display: none;
+  }
+
+  #top-container {
+    display: block;
+  }
+}
