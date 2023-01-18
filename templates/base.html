@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css_import %}{% endblock %}
     <link type="text/css" rel="stylesheet" href="../static/css/style.css">
     <title>RODRIGUEZ Matt - Portfolio</title>
 </head>
@@ -16,7 +17,7 @@
             <nav class="menu">
                 <ul>
                 {% for elt in ["Home", "About", "Services", "Portfolio", "Blog", "Contact"]: %}
-                    <li class="menu-item">{{ elt }}</li>
+                    <li class="menu-item"><a href="./{{ elt.lower() }}">{{ elt }}</a></li>
                     <hr class="menu-item-subline">
                 {% endfor %}
                 </ul>

@@ -1,0 +1,45 @@
+[
+    {
+        "degreeName": "Bachelor's degree in Computer Science, pathway: Digital for Connected Environments",
+        "degreeEstablishment": "Université de Pau et des Pays de l'Adour",
+        "startingDate": "01-09-2019",
+        "finishingDate": "01-09-2022",
+        "description": "Topics studied : Computer Science - Mathematics - Statistics & Data Analysis (descriptive, inferential, operational research) - Web/Mobile Devlopment - Embedded Systems (Sensors, μC, O.S.) - Algorithms - English - Design Patterns - O.O.P - Internet Of Things - Network - Database - Automated systems - Communication - Entrepreneurship",
+        "ranking": "3/18",
+        "grade": "13.971",
+        "mention": "with honours",
+        "otherInformation": "Scholarship : Talent Academy 2022",
+        "summaryByYear": [
+            {
+                "year": "Third Year",
+                "grade": "13,158",
+                "ranking": "3/18",
+                "mention": "with honours"
+            },
+            {
+                "year": "Second Year",
+                "grade": "13,805",
+                "ranking": "3/19",
+                "mention": "with honours"
+            },
+            {
+                "year": "First Year",
+                "grade": "14,776",
+                "ranking": "1/32",
+                "mention": "with high honours"
+            }
+        ]
+    },
+    {
+        "degreeName": "High school diploma, pathway : Information and Digital Dystems  ",
+        "degreeEstablishment": "CANTAU Highschool",
+        "startingDate": "01-09-2016",
+        "finishingDate": "01-07-2019",
+        "description": "Topics studied : Computer Science - Mathematics - Web Devlopment - Embedded Systems (Sensors, μC, O.S.) - Algorithms - English - Electronics - Engineering - Physics",
+        "ranking": "01/32",
+        "grade": "16.10/20",
+        "mention": "with highest honour",
+        "otherInformation": ""
+    }
+]
+

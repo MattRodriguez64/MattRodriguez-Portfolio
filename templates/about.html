@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block css_import %}
+<link type="text/css" rel="stylesheet" href="../static/css/style_about.css">
+{% endblock %}
+
+{% block content %}
+    <header class="about-header-title">
+        <h1 class="title">About Me</h1>
+        <div class="large-sub-rectangle"></div>
+        <div class="medium-sub-rectangle"></div>
+    </header>
+    <section class="about-description">
+        <p class="introduction">I'm Matt RODRIGUEZ, a developer and data analyst</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus ullam accusamus dolor eaque qui exercitationem excepturi alias, doloribus non totam numquam, eligendi sequi tempora! Facilis saepe quasi vitae blanditiis?</p>
+    </section>
+    <div class="informations-skills-wrapper">
+        <section class="about-informations">
+            <div class="sub-information">
+                <ul class="sub-information-list">
+                    {% for key,value in personal_data.items(): %}
+                    <li class="sub-information-item"><span class="item-key">{{ key }} : </span>{{ value }}</li>
+                    <hr class="sub-information-subline">
+                    {% endfor %}
+                </ul>
+            </div>
+            <button class="download-cv">Download CV</button>
+        </section>
+        <section class="about-skills">
+            {% for key,value in skills_data.items(): %}
+                <div class="skill-container">
+                    <div class="skill-information">
+                        <p class="skill">{{ key }}</p>
+                        <p class="skill-percentage">{{ value }}%</p>
+                    </div>
+                    <div class="skillbar-max">
+                        <!-- <div class="skillbar-percentage" style="width:{{ value }}%;"></div> -->
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+    <section class="about-education">
+
+    </section>
+
+{% endblock %}
