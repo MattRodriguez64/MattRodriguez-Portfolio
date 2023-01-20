@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700&display=swap');
+
+// Colors
+$main-yellow: #F1C40F;
+$main-dark: #151515;
+$dark-light: #222222;
+$gray: #373737;
+$white: #fefffa;
+$light-gray: #cecece;
+
+// Sizes
+$phone-view: 550px;
+
+// Mixins
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-base-code($wrap, $jcontent, $acontent, $aitems){
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $jcontent;
+  align-content: $acontent;
+  align-items: $aitems;
+}
+
+// MAIN CONTAINER
+.main-container {
+  .right-container {
+    padding: 60px 30px;
+    .about-header-title {
+      @include size(100%, auto);
+      text-align: left;
+      margin-bottom: 36px;
+      .title {
+        font-size: 44px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 12px;
+      }
+
+      .large-sub-rectangle {
+        @include size(50px, 5px);
+        background-color: $main-yellow;
+        margin-bottom: 6px;
+      }
+
+      .medium-sub-rectangle {
+        @include size(25px, 5px);
+        background-color: $main-yellow;
+      }
+    }
+  }
+}
+
+
+// RESPONSIVE
+

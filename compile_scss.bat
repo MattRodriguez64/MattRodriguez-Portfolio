@@ -1,1 +1,1 @@
-./static/css/dart-sass/sass ./static/css/style.scss ./static/css/style.css --style=compressed
+./static/css/dart-sass/sass ./static/css/%1.scss ./static/css/%1.css --style=compressed
